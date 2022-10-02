@@ -5,6 +5,7 @@ require("configs.alpha")
 require("configs.keymaps")
 require("configs.dap")
 require("configs.scrollbar")
+require("configs.jaq")
 
 --[[
 lvim is the global options object
@@ -16,7 +17,7 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
--- lvim.builtin.dap.active = true
+lvim.builtin.dap.active = true
 
 -- general
 lvim.log.level = "warn"
@@ -29,7 +30,6 @@ lvim.colorscheme = "tokyonight"
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode["<leader>db"] = "<cmd>lua require'dap'.toggle_breakpoint()<CR>"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
@@ -184,6 +184,16 @@ lvim.plugins = {
     -- git
     { "codeindulgence/vim-tig" },
 
+    -- lightspeed motion
+    { "ggandor/lightspeed.nvim" },
+
+    -- bookmarks
+    { "mattesgroeger/vim-bookmarks" },
+
+    -- Quick run
+    { "is0n/jaq-nvim" },
+    { "michaelb/sniprun", run = "bash ./install.sh" },
+
     -- DAP
     -- { "mfussenegger/nvim-dap" },
     { "rcarriga/nvim-dap-ui" },
@@ -204,3 +214,4 @@ lvim.plugins = {
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
+-- lvim.builtin.which_key.mappings["d"] = nil
