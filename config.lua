@@ -2,11 +2,12 @@
 require("configs.globals")
 require("configs.options")
 require("configs.alpha")
-require("configs.keymaps")
 require("configs.dap")
 require("configs.scrollbar")
 require("configs.jaq")
+require("configs.keymaps")
 
+lvim.builtin.breadcrumbs.active = true
 --[[
 lvim is the global options object
 

@@ -111,11 +111,6 @@ keymap("v", "<F3>", "<cmd>SnipRun<CR>", getOptions("  Run selection"))
 keymap("n", "<F4>", "<cmd>Jaq<CR>", getOptions("  Run code"))
 
 -- DAP debugging
-lvim.builtin.which_key.mappings["d"] = nil
--- lvim.builtin.which_key.mappings["d"] = {}
--- lvim.builtin.which_key.mappings["db"] = nil
--- lvim.builtin.which_key.mappings["db"] = {}
-
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", getOptions("  Toggle breakpoint"))
 keymap(
     "n",
