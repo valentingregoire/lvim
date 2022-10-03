@@ -11,11 +11,6 @@ if not dap_ui_status_ok then
     return
 end
 
---[[ local dap_install_status_ok, dap_install = pcall(require, "dap-install") ]]
---[[ if not dap_install_status_ok then ]]
---[[ 	return ]]
---[[ end ]]
-
 local dap_virtual_text_status_ok, dap_virtual_text = pcall(require, "nvim-dap-virtual-text")
 if not dap_virtual_text_status_ok then
     return
@@ -23,16 +18,9 @@ end
 
 lvim.builtin.dap.on_config_done = function()
     lvim.builtin.which_key.mappings["d"] = nil
+    vim.api.nvim_set_hl(0, "DapBreakpoint", { bg = "#4B1515", ctermbg = 0 })
+    -- vim.api.nvim_set_hl(0, "DapBreakpoint", { bg = "#2d202a", ctermbg = 0 })
 end
-
---[[ dap_install.setup({}) ]]
-
---[[ dap_install.config("python", { ]]
---[[ 	type = "executable", ]]
---[[ 	command = "/home/valentin/.virtualenvs/debugpy/bin/python", ]]
---[[ 	args = { "-m", "debugpy.adaptber" }, ]]
---[[ }) ]]
--- add other configs here
 
 -- Adapters
 dap.adapters.python = {
@@ -114,32 +102,18 @@ dap_virtual_text.setup({
     --[[ virt_text_pos = "right_align", -- "eol" | "overlay" | "right_align" ]]
 })
 
---[[ vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" }) ]]
---[[ vim.highlight.create('DapBreakpoint', { ctermbg=0, guifg='#e68585', guibg='#291f1f' }, false) ]]
-lvim.builtin.dap["breakpoint"] = { text = "", texthl = "DiagnosticSignError", linehl = "DapBreakpoint",
-    numhl = "DapBreakpoint" }
--- vim.highlight.create("DapBreakpoint", { ctermbg = 0, guifg = "", guibg = "#4B1515" }, false)
--- vim.highlight.create("DapLogPoint", { ctermbg = 0, guifg = "", guibg = "#19232b" }, false)
--- vim.highlight.create("DapStopped", { ctermbg = 0, guifg = "", guibg = "#1b2916" }, false)
-
--- vim.fn.sign_define(
---     "DapBreakpoint",
---     { text = "", texthl = "DiagnosticSignError", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
--- )
-
--- vim.fn.sign_define(
---     "DapBreakpointCondition",
---     { text = "ﳁ", texthl = "DiagnosticSignError", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
--- )
--- vim.fn.sign_define(
---     "DapBreakpointRejected",
---     { text = "", texthl = "DiagnosticSignError", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
--- )
--- vim.fn.sign_define(
---     "DapLogPoint",
---     { text = "", texthl = "DapLogPoint", linehl = "DapLogPoint", numhl = "DapLogPoint" }
--- )
--- vim.fn.sign_define("DapStopped", { text = "", texthl = "DapStopped", linehl = "DapStopped", numhl = "DapStopped" })
+lvim.builtin.dap["breakpoint"] = {
+    text = "",
+    texthl = "DiagnosticSignError",
+    linehl = "DapBreakpoint",
+    numhl = "DapBreakpoint"
+}
+lvim.builtin.dap["breakpoint_rejected"] = {
+    text = "",
+    texthl = "LspDiagnosticsSignHint",
+    linehl = "DapBreakpoint",
+    numhl = "DapBreakpoint"
+}
 
 local dap_python_status_ok, dap_python = pcall(require, "dap_python")
 if not dap_python_status_ok then
