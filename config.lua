@@ -5,6 +5,9 @@ require("configs.alpha")
 require("configs.dap")
 require("configs.scrollbar")
 require("configs.jaq")
+-- require("configs.onedark")
+require("configs.lualine")
+-- keymaps as last
 require("configs.keymaps")
 
 lvim.builtin.breadcrumbs.active = true
@@ -23,7 +26,9 @@ lvim.builtin.dap.active = true
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "tokyonight"
+-- lvim.colorscheme = "tokyonight"
+-- lvim.colorscheme = "onedark"
+lvim.colorscheme = "monokai"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -168,6 +173,10 @@ linters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
+    -- color schemes
+    { "EdenEast/nightfox.nvim" },
+    { "navarasu/onedark.nvim" },
+    { "tanvirtin/monokai.nvim" },
     --pop-up
     { "stevearc/dressing.nvim" },
 
