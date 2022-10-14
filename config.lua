@@ -3,6 +3,7 @@ require("configs.globals")
 require("configs.options")
 require("configs.alpha")
 require("configs.dap")
+require("configs.neotest")
 require("configs.scrollbar")
 require("configs.jaq")
 -- require("configs.onedark")
@@ -27,9 +28,9 @@ lvim.builtin.dap.active = true
 lvim.log.level = "warn"
 lvim.format_on_save = true
 -- lvim.colorscheme = "tokyonight"
--- lvim.colorscheme = "onedark"
+lvim.colorscheme = "onedark"
 -- lvim.colorscheme = "monokai"
-lvim.colorscheme = "carbonfox"
+-- lvim.colorscheme = "carbonfox"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -210,6 +211,18 @@ lvim.plugins = {
     -- { "rcarriga/nvim-dap-ui" },
     { "theHamsta/nvim-dap-virtual-text" },
     { "mfussenegger/nvim-dap-python" },
+
+    -- neotest
+    { "nvim-neotest/neotest",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter",
+            "antoinemadec/FixCursorHold.nvim"
+        }
+    },
+    { "nvim-neotest/neotest-plenary" },
+    { "nvim-neotest/neotest-vim-test" },
+    { "nvim-neotest/neotest-python" }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

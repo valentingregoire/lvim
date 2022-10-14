@@ -121,6 +121,10 @@ if not dap_python_status_ok then
 end
 
 dap_python.setup(os.getenv("HOME") .. "/.virtualenvs/debugpy/bin/python")
+dap_python.resolve_python = function()
+    -- return PYTHON_VIRTUAL_ENV()
+    return "/home/valentin/.virtualenvs/appstore_portal_back_end/bin/python"
+end
 -- dap_python.setup(PYTHON_VIRTUAL_ENV())
 
 --[[ local test_runners = dap_python.test_runners ]]

@@ -132,7 +132,8 @@ keymap("n", "<leader>do", "<cmd>lua require'dap'.step_over()<cr>", getOptions("�
 keymap("n", "<F6>", "<cmd>lua require'dap'.step_over()<cr>", getOptions("  Step over"))
 keymap("n", "<leader>dO", "<cmd>lua require'dap'.step_out()<cr>", getOptions("  Step out"))
 keymap("n", "<F7>", "<cmd>lua require'dap'.step_out()<cr>", getOptions("  Step out"))
-keymap("n", "<leader>dm", "<cmd>lua require'dap-python'.test_method()<cr>", getOptions("  Test method"))
+-- keymap("n", "<leader>dm", "<cmd>lua require'dap-python'.test_method()<cr>", getOptions("  Test method"))
+keymap("n", "<leader>dm", "<cmd>lua require'neotest'.run.run()<cr>", getOptions("  Test method"))
 keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", getOptions("  Toggle REPL"))
 keymap("n", "<leader>dL", "<cmd>lua require'dap'.run_last()<cr>", getOptions("漏 Run last"))
 keymap("n", "<leader>dg", "<cmd>lua require'dapui'.toggle()<cr>", getOptions("拓 Toggle GUI"))
@@ -148,6 +149,13 @@ keymap("", "<Leader>tf", "<cmd>ToggleTerm direction=float<CR>", getOptions("禎 
 keymap("", "<Leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", getOptions("ﬠ  Toggle horizontal terminal"))
 keymap("", "<Leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", getOptions("ײַ  Toggle vertical terminal"))
 -- keymap("t", "<Leader>t", "<cmd>ToggleTerm<CR>", getOptions("  Toggle terminal"))
+
+-- neotest
+keymap("", "<Leader>um", "<cmd>lua require'neotest'.run.run()<cr>", getOptions("ﭧ Test method"))
+keymap("", "<Leader>ud", "<cmd>lua require'neotest'.run.run({strategy='dap'})<cr>", getOptions(" Debug method"))
+keymap("", "<Leader>uc", "<cmd>lua require'neotest'.run.run(vim.fn.expand('%'))<cr>", getOptions("  Test class"))
+keymap("", "<Leader>uo", "<cmd>lua require'neotest'.output.open()<cr>", getOptions("  Output"))
+keymap("", "<Leader>us", "<cmd>lua require'neotest'.summary.open()<cr>", getOptions("  Summary"))
 
 -- markdown preview
 keymap("", "<Leader>p", "<cmd>MarkdownPreviewToggle<CR>", getOptions("  Markdown preview"))
@@ -177,6 +185,7 @@ wk.mappings["l"].name = "  LSP"
 -- wk.mappings["l"] = { name = "  LSP", prefix = "<leader>" }
 wk.mappings["s"] = { name = "  Sessions", prefix = "<leader>" }
 wk.mappings["t"] = { name = "  Terminal", prefix = "<leader>" }
+wk.mappings["u"] = { name = "  Unit tests", prefix = "<leader>" }
 
 -- for _, v in ipairs(mappings) do
 --     table.insert(wk.mappings, v)
