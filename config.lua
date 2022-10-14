@@ -28,7 +28,8 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 -- lvim.colorscheme = "tokyonight"
 -- lvim.colorscheme = "onedark"
-lvim.colorscheme = "monokai"
+-- lvim.colorscheme = "monokai"
+lvim.colorscheme = "carbonfox"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -206,7 +207,7 @@ lvim.plugins = {
 
     -- DAP
     -- { "mfussenegger/nvim-dap" },
-    { "rcarriga/nvim-dap-ui" },
+    -- { "rcarriga/nvim-dap-ui" },
     { "theHamsta/nvim-dap-virtual-text" },
     { "mfussenegger/nvim-dap-python" },
 }

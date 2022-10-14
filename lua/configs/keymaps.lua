@@ -147,7 +147,7 @@ keymap("v", "<leader>du", "<cmd>lua require('dapui').eval()<CR>", getOptions("�
 keymap("", "<Leader>tf", "<cmd>ToggleTerm direction=float<CR>", getOptions("禎 Toggle floating terminal"))
 keymap("", "<Leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", getOptions("ﬠ  Toggle horizontal terminal"))
 keymap("", "<Leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", getOptions("ײַ  Toggle vertical terminal"))
-keymap("t", "<Leader>t", "<cmd>ToggleTerm<CR>", getOptions("  Toggle terminal"))
+-- keymap("t", "<Leader>t", "<cmd>ToggleTerm<CR>", getOptions("  Toggle terminal"))
 
 -- markdown preview
 keymap("", "<Leader>p", "<cmd>MarkdownPreviewToggle<CR>", getOptions("  Markdown preview"))
