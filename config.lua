@@ -6,7 +6,7 @@ require("configs.dap")
 require("configs.neotest")
 require("configs.scrollbar")
 require("configs.jaq")
--- require("configs.onedark")
+require("configs.onedark")
 require("configs.lualine")
 -- keymaps as last
 require("configs.keymaps")
@@ -178,7 +178,7 @@ lvim.plugins = {
     -- color schemes
     { "EdenEast/nightfox.nvim" },
     { "navarasu/onedark.nvim" },
-    { "tanvirtin/monokai.nvim" },
+    -- { "tanvirtin/monokai.nvim" },
     --pop-up
     { "stevearc/dressing.nvim" },
 
