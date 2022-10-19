@@ -1,1 +1,12 @@
 -- lvim.builtin.lualine
+-- lvim.builtin.lualine.sections.lualine_a = { "mode" }
+-- lvim.builtin.lualine.sections.lualine_a = {
+--     mode = {
+--         function()
+--             return " " .. lvim.icons.ui.Target .. " "
+--         end,
+--         padding = { left = 0, right = 0 },
+--         color = {},
+--         cond = nil,
+--     }
+-- }

@@ -9,6 +9,7 @@ require("configs.jaq")
 require("configs.onedark")
 require("configs.lualine")
 require("configs.illuminate")
+require("configs.telescope")
 -- keymaps as last
 require("configs.keymaps")
 
