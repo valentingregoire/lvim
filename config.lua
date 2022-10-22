@@ -182,6 +182,7 @@ lvim.plugins = {
     { "EdenEast/nightfox.nvim" },
     { "navarasu/onedark.nvim" },
     -- { "tanvirtin/monokai.nvim" },
+
     --pop-up
     { "stevearc/dressing.nvim" },
 
