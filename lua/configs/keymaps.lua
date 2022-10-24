@@ -28,7 +28,7 @@ vim.g.mapleader = " "
 keymap("n", "<Leader>e", "<cmd>NvimTreeToggle<CR>", getOptions("פּ  Toggle explorer"))
 keymap("n", "<Leader>n", "<cmd>noh<CR>", getOptions("  Remove search highlights"))
 keymap("", "<Leader>h", "<cmd>Alpha<CR>", getOptions("  Home"))
-keymap("", "<Leader>m", "<cmd>Notifications<CR>", getOptions("  Notifications"))
+-- keymap("", "<Leader>m", "<cmd>Notifications<CR>", getOptions("  Notifications"))
 
 -- leader leader (vim stuff)
 keymap("n", "<Leader><Leader>x", ":source %<CR>", getOptions("勒 Reload configs"))

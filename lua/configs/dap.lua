@@ -71,32 +71,34 @@ dap.configurations.python = {
     }
 }
 
-dapui.setup({
-    layouts = {
-        {
-            elements = {
-                "watches",
-                { id = "scopes", size = 0.25 },
-                "stacks",
-                "breakpoints",
-            },
-            size = 0.25,
-            position = "right",
-        },
-        {
-            elements = {
-                "repl",
-                --[[ { id = "repl", size = 0.7 }, ]]
-                --[[ "console", ]]
-            },
-            size = 0.3,
-            position = "bottom",
-        },
-    },
-    floating = {
-        border = "rounded",
-    },
-})
+-- dapui.setup({
+--     layouts = {
+--         {
+--             elements = {
+--                 "watches",
+--                 { id = "scopes", size = 0.25 },
+--                 "stacks",
+--                 "breakpoints",
+--             },
+--             size = 0.25,
+--             position = "right",
+--         },
+--         {
+--             elements = {
+--                 "repl",
+--                 --[[ { id = "repl", size = 0.7 }, ]]
+--                 --[[ "console", ]]
+--             },
+--             size = 0.3,
+--             position = "bottom",
+--         },
+--     },
+--     floating = {
+--         border = "rounded",
+--     },
+-- })
+
+-- lvim.dapui.
 
 dap_virtual_text.setup({
     --[[ virt_text_pos = "right_align", -- "eol" | "overlay" | "right_align" ]]
