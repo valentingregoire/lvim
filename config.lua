@@ -10,6 +10,7 @@ require("configs.onedark")
 require("configs.lualine")
 require("configs.illuminate")
 require("configs.telescope")
+require("configs.notify")
 -- keymaps as last
 require("configs.keymaps")
 
