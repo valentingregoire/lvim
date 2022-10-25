@@ -6,3 +6,5 @@ lvim.builtin.telescope.pickers.live_grep = {
         prompt_position = "bottom",
     },
 }
+
+-- lvim.builtin.telescope.pickers.buffers.theme = "dropdown"
