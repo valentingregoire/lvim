@@ -40,6 +40,15 @@ dap.configurations.python = {
     {
         type = "python",
         request = "launch",
+        name = "backend",
+        pythonPath = PYTHON_VIRTUAL_ENV(),
+        program = "${file}",
+        justMyCode = false,
+        cwd = "${workspaceFolder}/backend"
+    },
+    {
+        type = "python",
+        request = "launch",
         name = "cwd/cwd",
         pythonPath = PYTHON_VIRTUAL_ENV(),
         program = "${file}",

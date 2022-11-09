@@ -1,1 +1,1 @@
-lvim.builtin.illuminate.active = false
+lvim.builtin.illuminate.active = true

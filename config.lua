@@ -11,6 +11,7 @@ require("configs.lualine")
 require("configs.illuminate")
 require("configs.telescope")
 require("configs.notify")
+require("configs.gitsigns")
 -- keymaps as last
 require("configs.keymaps")
 
@@ -184,6 +185,9 @@ lvim.plugins = {
     { "navarasu/onedark.nvim" },
     -- { "tanvirtin/monokai.nvim" },
 
+    -- sessions
+    { "shatur/neovim-session-manager" },
+
     --pop-up
     { "stevearc/dressing.nvim" },
 
@@ -205,7 +209,8 @@ lvim.plugins = {
     { "codeindulgence/vim-tig" },
 
     -- lightspeed motion
-    { "ggandor/lightspeed.nvim" },
+    -- { "ggandor/lightspeed.nvim" },
+    { "ggandor/leap.nvim" },
 
     -- bookmarks
     { "mattesgroeger/vim-bookmarks" },
@@ -217,6 +222,17 @@ lvim.plugins = {
     -- Quick run
     { "is0n/jaq-nvim" },
     { "michaelb/sniprun", run = "bash ./install.sh" },
+
+    -- doc strings
+    {
+        "danymat/neogen",
+        config = function()
+            require('neogen').setup {}
+        end,
+        requires = "nvim-treesitter/nvim-treesitter",
+        -- Uncomment next line if you want to follow only stable versions
+        -- tag = "*"
+    },
 
     -- DAP
     -- { "mfussenegger/nvim-dap" },

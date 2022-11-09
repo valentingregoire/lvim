@@ -82,7 +82,12 @@ keymap("", "<Leader>sa", "<cmd>SessionManager load_last_session<CR>", getOptions
 keymap("", "<Leader>ss", "<cmd>SessionManager save_current_session<CR>", getOptions("  Save session"))
 keymap("", "<Leader>sl", "<cmd>SessionManager load_session<CR>", getOptions("  Load session"))
 keymap("", "<Leader>sd", "<cmd>SessionManager delete_session<CR>", getOptions("  Delete session"))
--- keymap("n", "<Leader>ss", "<cmd>SessionManager load_session " .. input('What session?') .. "<CR>", getOptions("Load session"))
+-- autosession
+-- keymap("", "<Leader>sa", "<cmd>RestoreSession<CR>", getOptions("  Load last session")) keymap("", "<Leader>ss", "<cmd>SaveSession<CR>", getOptions("  Save session"))
+-- keymap("", "<Leader>sl", "<cmd>Autosession search<CR>", getOptions("  Load session"))
+-- keymap("", "<Leader>sd", "<cmd>Autosession delete<CR>", getOptions("  Delete session"))
+
+
 
 -- NvimTree
 keymap("n", "<Leader>e", "<cmd>NvimTreeToggle<CR>", getOptions("פּ  Toggle explorer"))
@@ -99,7 +104,7 @@ keymap("n", "<leader>fn", "<cmd>new<CR>", getOptions("  New file"))
 
 -- Git
 --[[ keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", getOptions("  Git")) ]]
-keymap("n", "<leader>gg", "<cmd>LazyGit<CR>", getOptions("  Git"))
+-- keymap("n", "<leader>gg", "<cmd>LazyGit<CR>", getOptions("  Git"))
 
 -- -- Comment
 -- keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)

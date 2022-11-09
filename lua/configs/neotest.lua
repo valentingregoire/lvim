@@ -3,7 +3,9 @@ require("neotest").setup({
         require("neotest-python")({
             dap = { justMyCode = false },
             -- args = { "--rootdir=src/tests" },
-            runner = "nose2",
+            -- runner = "nose2",
+            runner = "unittest",
+            -- args = { "-t=pyrtus" }
         }),
         -- require("neotest-plenary"),
         -- require("neotest-vim-test")({
