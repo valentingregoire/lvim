@@ -161,6 +161,9 @@ keymap("", "<Leader>ud", "<cmd>lua require'neotest'.run.run({strategy='dap'})<cr
 keymap("", "<Leader>uc", "<cmd>lua require'neotest'.run.run(vim.fn.expand('%'))<cr>", getOptions("  Test class"))
 keymap("", "<Leader>uo", "<cmd>lua require'neotest'.output_panel.toggle()<cr>", getOptions("  Output"))
 keymap("", "<Leader>us", "<cmd>lua require'neotest'.summary.toggle()<cr>", getOptions("  Summary"))
+keymap("", "<Leader>ug",
+    "<cmd>lua require'neotest'.output_panel.toggle()<cr><cmd>lua require'neotest'.summary.toggle()<cr>",
+    getOptions("拓 Toggle GUI"))
 
 -- markdown preview
 keymap("", "<Leader>p", "<cmd>MarkdownPreviewToggle<CR>", getOptions("  Markdown preview"))
