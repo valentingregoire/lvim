@@ -86,10 +86,10 @@ lvim.builtin.dap.ui.config.layouts = {
     --     layouts = {
     {
         elements = {
-            { id = "scopes", size = 0.25 },
+            "watches",
+            { id = "scopes", size = 0.40 },
             "breakpoints",
             "stacks",
-            "watches",
         },
         size = 0.25,
         position = "right",
