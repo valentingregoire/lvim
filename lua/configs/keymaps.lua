@@ -38,6 +38,9 @@ keymap("n", "<c-s>", ":w<CR>", getOptions("  Save"))
 keymap("i", "<c-s>", "<ESC>:w<CR>a", getOptions("  Save"))
 keymap("n", '<Leader>"', 'ciw""<Esc>P', getOptions("  Double quotes"))
 keymap("n", "<Leader>'", "ciw''<Esc>P", getOptions("  Single quotes"))
+keymap("v", "<Tab>", ">gv", getOptions("  Indent right"))
+-- won't work because of buffer change with <S-Tab>
+-- keymap("v", "<S-Tab>", "<gv", getOptions("  Indent left"))
 
 -- window management
 keymap("n", "<c-h>", "<c-w>h", getOptions("  Window left"))
@@ -64,6 +67,7 @@ keymap("", "<S-R>", "<cmd>bn<CR>", getOptions("  Next buffer"))
 keymap("", "<PageUp>", "<cmd>bp<CR>", getOptions("  Previous buffer"))
 keymap("", "<PageDown>", "<cmd>bn<CR>", getOptions("  Next buffer"))
 keymap("", "<S-Tab>", "<cmd>:b#<CR>", getOptions(" Jump to last used buffer"))
+keymap("i", "<S-Tab>", "<cmd>:b#<CR>", getOptions(" Jump to last used buffer"))
 keymap("", "<Leader>bcc", "<cmd>bw<CR>", getOptions("  Close buffer"))
 keymap("", "<Leader>bcC", "<cmd>bw!<CR>", getOptions("  Force close buffer"))
 keymap("", "<Leader>bcl", "<cmd>BufferLineCloseLeft<CR>", getOptions("  Close buffers to the left"))
