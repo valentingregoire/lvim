@@ -61,6 +61,9 @@ keymap("v", "<", "<gv", getOptions("  Decrease indentation"))
 -- Buffers
 keymap("", "<S-E>", "<cmd>bp<CR>", getOptions("  Previous buffer"))
 keymap("", "<S-R>", "<cmd>bn<CR>", getOptions("  Next buffer"))
+keymap("", "<PageUp>", "<cmd>bp<CR>", getOptions("  Previous buffer"))
+keymap("", "<PageDown>", "<cmd>bn<CR>", getOptions("  Next buffer"))
+keymap("", "<S-Tab>", "<cmd>:b#<CR>", getOptions(" Jump to last used buffer"))
 keymap("", "<Leader>bcc", "<cmd>bw<CR>", getOptions("  Close buffer"))
 keymap("", "<Leader>bcC", "<cmd>bw!<CR>", getOptions("  Force close buffer"))
 keymap("", "<Leader>bcl", "<cmd>BufferLineCloseLeft<CR>", getOptions("  Close buffers to the left"))
@@ -69,7 +72,6 @@ keymap("", "<Leader>bp", "<cmd>bp<CR>", getOptions("  Previous buffer"))
 keymap("", "<Leader>bn", "<cmd>bn<CR>", getOptions("  Next buffer"))
 keymap("", "<Leader>bl", "<cmd>Telescope buffers<CR>", getOptions("  List buffers"))
 keymap("", "<Leader>bp", "<cmd>BufferLineTogglePin<CR>", getOptions("車 Toggle pin"))
-keymap("", "<S-Tab>", "<cmd>:b#<CR>", getOptions(" Jump to last used buffer"))
 
 -- Session manager
 keymap("", "<Leader>sa", "<cmd>SessionManager load_last_session<CR>", getOptions("  Load last session"))
