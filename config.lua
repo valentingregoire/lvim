@@ -12,6 +12,7 @@ require("configs.illuminate")
 require("configs.telescope")
 require("configs.notify")
 require("configs.gitsigns")
+require("configs.outline")
 -- keymaps as last
 require("configs.keymaps")
 
@@ -218,6 +219,10 @@ lvim.plugins = {
     -- markdown
     { "iamcco/markdown-preview.nvim", run = "cd app && npm install",
         setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, },
+
+    -- code (k)
+    -- outline
+    { "simrat39/symbols-outline.nvim" },
 
     -- Quick run
     { "is0n/jaq-nvim" },
