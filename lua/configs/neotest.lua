@@ -6,7 +6,7 @@ require("neotest").setup({
             -- runner = "pytest",
             -- runner = "nose2",
             runner = "unittest",
-            -- args = { "-t=pyrtus" }
+            -- args = { "-t=src" }
             -- python = function()
             --     return PYTHON_VIRTUAL_ENV()
             -- end

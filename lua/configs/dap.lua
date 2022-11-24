@@ -19,7 +19,7 @@ end
 lvim.builtin.dap.on_config_done = function()
     lvim.builtin.which_key.mappings["d"] = nil
     vim.api.nvim_set_hl(0, "DapBreakpoint", { bg = "#4B1515", ctermbg = 0 })
-    -- vim.api.nvim_set_hl(0, "DapBreakpoint", { bg = "#2d202a", ctermbg = 0 })
+    vim.api.nvim_set_hl(0, "DapStopped", { bg = "#1E3210", ctermbg = 0 })
 end
 
 -- Adapters
@@ -126,6 +126,15 @@ lvim.builtin.dap["breakpoint_rejected"] = {
     texthl = "LspDiagnosticsSignHint",
     linehl = "DapBreakpoint",
     numhl = "DapBreakpoint"
+}
+lvim.builtin.dap["stopped"] = {
+    text = "",
+    -- texthl = "DiagnosticSignWarn",
+    -- linehl = "Visual",
+    -- numhl = "DiagnosticSignWarn",
+    -- texthl = "DapStopped",
+    linehl = "DapStopped",
+    numhl = "DapStopped",
 }
 
 local dap_python_status_ok, dap_python = pcall(require, "dap_python")
