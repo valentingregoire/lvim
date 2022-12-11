@@ -185,7 +185,7 @@ keymap("", "<Leader>km", "<cmd>MarkdownPreviewToggle<CR>", getOptions("  Mark
 -- LSP
 keymap("", "<Leader>lo", "<cmd>lua vim.lsp.buf.signature_help()<CR>", getOptions("  Signature help"))
 keymap("", "<Leader>kk", "<cmd>lua vim.lsp.buf.signature_help()<CR>", getOptions("  Signature help"))
-keymap("", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", getOptions("  Signature help"))
+-- keymap("", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", getOptions("  Signature help"))
 keymap("i", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", getOptions("  Signature help"))
 
 -- Which key
