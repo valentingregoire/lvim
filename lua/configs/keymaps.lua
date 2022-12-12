@@ -109,6 +109,9 @@ keymap("n", "<Leader>fn", "<cmd>new<CR>", getOptions("  New file"))
 -- -- Comment
 -- keymap("n", "<Leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 -- keymap("x", "<Leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
+keymap("", "<Leader>gdc", "<cmd>DiffviewFileHistory %<CR>", getOptions("  Current file history"))
+keymap("", "<Leader>gdt", "<cmd>DiffviewClose<CR>", getOptions("  Close Diffview"))
+
 
 -- DAP debugging
 keymap("n", "<Leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", getOptions("  Toggle breakpoint"))
@@ -190,7 +193,9 @@ keymap("i", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", getOptions("�
 
 -- Which key
 local wk = lvim.builtin.which_key
-
+-- wk.mappings["<Leader>"] = { name = "  Special", prefix = "<Leader>" }
+wk.mappings["/"] = { name = "  Toggle line comment", prefix = "<Leader>" }
+wk.mappings[";"] = { name = "  Dashboard", prefix = "<Leader>" }
 wk.mappings["m"] = {
     name = "  Bookmarks",
     a = "  Show all bookmarks",
@@ -204,18 +209,23 @@ wk.mappings["m"] = {
     j = { name = "ﰭ  Move bookmark down", j = "ﰭ  Move bookmark down" },
     k = { name = "ﰶ  Move bookmark up", j = "ﰭ  Move bookmark up" },
 }
-wk.mappings["b"] = { name = "裡 Buffers", prefix = "<Leader>" }
-wk.mappings["bc"] = { name = "  Close buffer", prefix = "<Leader>" }
-wk.mappings["d"] = { name = "ﴫ  Debug", prefix = "<Leader>" }
-wk.mappings["f"] = { name = "  Telescope", prefix = "<Leader>" }
-wk.mappings["g"] = { name = "  Git", prefix = "<Leader>" }
-wk.mappings["k"] = { name = "  Code", prefix = "<Leader>" }
+wk.mappings["b"] = { name = "裡 Buffers" }
+wk.mappings["bc"] = { name = "  Close buffer" }
+wk.mappings["c"] = { name = "  Close buffer", prefix = "<Leader>" }
+-- wk.mappings["d"] = { name = "ﴫ  Debug", prefix = "<Leader>" }
+wk.mappings["d"] = { name = "ﴫ  Debug" } -- TODO: figure out why this doesn't work
+wk.mappings["e"] = { name = "פּ  Explorer", prefix = "<Leader>" }
+wk.mappings["f"] = { name = "  Telescope" }
+wk.mappings["g"] = { name = "  Git" }
+wk.mappings["gd"] = { name = "  Diffview" }
+wk.mappings["h"] = { name = "  Remove search highlights", prefix = "<Leader>" }
+wk.mappings["k"] = { name = "  Code" }
 wk.mappings["l"].name = "  LSP"
--- wk.mappings["l"] = { name = "  LSP", prefix = "<Leader>" }
-wk.mappings["s"] = { name = "  Sessions", prefix = "<Leader>" }
-wk.mappings["t"] = { name = "  Terminal", prefix = "<Leader>" }
-wk.mappings["u"] = { name = "  Unit tests", prefix = "<Leader>" }
-
--- for _, v in ipairs(mappings) do
---     table.insert(wk.mappings, v)
--- end
+wk.mappings["L"].name = "  LunarVim"
+wk.mappings["p"].name = "  Packer"
+wk.mappings["q"] = { name = "  Quit", prefix = "<Leader>" }
+wk.mappings["s"] = { name = "  Sessions" }
+wk.mappings["t"] = { name = "  Terminal" }
+wk.mappings["T"] = { name = "  Treesitter" }
+wk.mappings["u"] = { name = "  Unit tests" }
+wk.mappings["w"] = { name = "  Save", prefix = "<Leader>" }
