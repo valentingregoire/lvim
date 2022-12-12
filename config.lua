@@ -13,6 +13,7 @@ require("configs.telescope")
 require("configs.notify")
 require("configs.gitsigns")
 require("configs.outline")
+require("configs.which_key")
 -- keymaps as last
 require("configs.keymaps")
 
